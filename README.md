@@ -3,6 +3,8 @@
 A simple Java backend application that provides a RESTful API for managing a collection of items. Suitable for e-commerce products, movies, books, or any similar catalog use case.
 
 ## Deployed link
+https://java-api-task.netlify.app/
+
 https://items-api-task.onrender.com
 
 ## Tech Stack
