@@ -2,12 +2,30 @@
 
 A simple Java backend application that provides a RESTful API for managing a collection of items. Suitable for e-commerce products, movies, books, or any similar catalog use case.
 
+## deployed link
+
+
 ## Tech Stack
 
 - Java 17
 - Spring Boot 3.2
 - Maven
 - In-memory storage (ArrayList)
+
+## Project Structure
+
+src/main/java/com/example/itemsapi
+- controller  
+  - ItemController  
+  - GlobalExceptionHandler
+- service  
+  - ItemService
+- repository  
+  - ItemRepository
+- model  
+  - Item
+- dto  
+  - CreateItemRequest
 
 ## Prerequisites
 
@@ -47,7 +65,7 @@ Request Body (JSON):
 {
   "name": "Wireless Headphones",
   "description": "Noise-cancelling Bluetooth headphones",
-  "price": 99.99,
+  "price": 1000.00,
   "category": "Electronics"
 }
 ```
@@ -63,29 +81,10 @@ Request Body (JSON):
 
 Example: `GET /api/items/1`
 
-## Example cURL Commands
-
-```bash
-# Add an item
-curl -X POST http://localhost:8080/api/items -H "Content-Type: application/json" -d "{\"name\":\"Laptop\",\"description\":\"15-inch laptop\",\"price\":899.99,\"category\":\"Electronics\"}"
-
-# Get item by ID
-curl http://localhost:8080/api/items/1
-```
-
 ## STS Import
 
 1. File → Import → Maven → Existing Maven Projects
 2. Root Directory: Browse to this project folder
-3. Ensure pom.xml is checked
-4. Finish
-5. Right-click ItemsApiApplication.java → Run As → Spring Boot App
+3. Finish
+4. Right-click ItemsApiApplication.java → Run As → Spring Boot App
 
-## Deploy on Render
-
-1. Push this project to GitHub
-2. Go to render.com → New → Web Service
-3. Connect your repo
-4. Build Command: `mvn clean package -DskipTests`
-5. Start Command: `java -jar target/items-api-1.0.0.jar`
-6. Create Web Service
