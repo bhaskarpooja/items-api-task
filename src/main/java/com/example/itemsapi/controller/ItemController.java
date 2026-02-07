@@ -46,4 +46,5 @@ public class ItemController {
             To access an item: GET /api/items/{id}  
             Replace {id} with the item ID returned from POST
             """;
+    }
 }
