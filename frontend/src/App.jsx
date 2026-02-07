@@ -78,7 +78,7 @@ export default function App() {
 
   return (
     <>
-      <h1 className="app-title">Items API – UI</h1>
+      <h1 className="app-title">Items API Project Task</h1>
 
       <section className="section">
         <h2>Create item</h2>
