@@ -2,8 +2,8 @@
 
 A simple Java backend application that provides a RESTful API for managing a collection of items. Suitable for e-commerce products, movies, books, or any similar catalog use case.
 
-## deployed link
-
+## Deployed link
+https://items-api-task.onrender.com
 
 ## Tech Stack
 
@@ -38,11 +38,6 @@ src/main/java/com/example/itemsapi
 
 ```bash
 mvn spring-boot:run
-```
-
-Or using Maven Wrapper (Windows):
-```bash
-mvnw.cmd spring-boot:run
 ```
 
 The API will be available at `http://localhost:8080`.
