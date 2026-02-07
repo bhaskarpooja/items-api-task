@@ -76,6 +76,17 @@ Request Body (JSON):
 
 Example: `GET /api/items/1`
 
+## Frontend UI (Vercel / Netlify)
+
+A simple React UI lives in the `frontend/` folder. To deploy it:
+
+1. Deploy the `frontend` app to **Vercel** or **Netlify** (build: `npm run build`, output: `dist`). Set env var `VITE_API_URL=https://items-api-task.onrender.com`.
+2. On **Render**, set the backend environment variable **`CORS_ALLOWED_ORIGINS`** to your frontend URL(s), comma-separated, e.g.  
+   `https://your-app.vercel.app` or `https://your-app.netlify.app`
+3. Redeploy the backend on Render so CORS takes effect.
+
+See `frontend/README.md` for local run and deploy steps.
+
 ## STS Import
 
 1. File → Import → Maven → Existing Maven Projects
