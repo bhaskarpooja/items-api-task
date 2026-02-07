@@ -34,4 +34,16 @@ public class ItemController {
         }
         return ResponseEntity.ok(item);
     }
+
+    @GetMapping("/")
+    public String home() {
+        return """
+            Items API is live!  
+
+            To add an item: POST JSON to /api/items  
+            Example JSON: { "name": "Sample", "description": "Sample description" }  
+
+            To access an item: GET /api/items/{id}  
+            Replace {id} with the item ID returned from POST
+            """;
 }
