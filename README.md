@@ -16,18 +16,18 @@ https://items-api-task.onrender.com
 
 ## Project Structure
 
-src/main/java/com/example/itemsapi
-- controller  
-  - ItemController  
-  - GlobalExceptionHandler
-- service  
-  - ItemService
-- repository  
-  - ItemRepository
-- model  
-  - Item
-- dto  
-  - CreateItemRequest
+| Path | Description |
+|------|-------------|
+| `frontend/` | React UI – Create item, Get by ID |
+| `frontend/src/App.jsx` | Main UI and API calls |
+| `src/main/java/.../config/WebConfig.java` | CORS for frontend origin |
+| `src/main/java/.../controller/ItemController.java` | REST endpoints `/api/items` |
+| `src/main/java/.../service/ItemService.java` | Item business logic |
+| `src/main/java/.../repository/ItemRepository.java` | In-memory storage |
+| `src/main/java/.../model/Item.java` | Item entity |
+| `src/main/java/.../dto/CreateItemRequest.java` | Request DTO and validation |
+| `src/main/resources/application.properties` | Port, CORS origins (env: `CORS_ALLOWED_ORIGINS`) |
+| `pom.xml` | Maven build and dependencies |
 
 ## Prerequisites
 
@@ -77,17 +77,6 @@ Request Body (JSON):
 **GET** `/api/items/{id}`
 
 Example: `GET /api/items/1`
-
-## Frontend UI (Vercel / Netlify)
-
-A simple React UI lives in the `frontend/` folder. To deploy it:
-
-1. Deploy the `frontend` app to **Vercel** or **Netlify** (build: `npm run build`, output: `dist`). Set env var `VITE_API_URL=https://items-api-task.onrender.com`.
-2. On **Render**, set the backend environment variable **`CORS_ALLOWED_ORIGINS`** to your frontend URL(s), comma-separated, e.g.  
-   `https://your-app.vercel.app` or `https://your-app.netlify.app`
-3. Redeploy the backend on Render so CORS takes effect.
-
-See `frontend/README.md` for local run and deploy steps.
 
 ## STS Import
 
